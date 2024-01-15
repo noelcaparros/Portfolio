@@ -4,45 +4,58 @@ import LinkedInIcon from "../assets/icons/LinkedIn.astro";
 import SocialPill from "../components/SocialPill.astro";
 import GithubIcon from "../assets/icons/Github.astro";
 import GmailIcon from "../assets/icons/Gmail.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Briefcase from "../assets/icons/Briefcase.astro";
 ---
 
 <Layout
   title="Noel Caparrós - Portfolio"
   description="Hire me as a software developer. I'm specialized in web application development."
 >
-  <main>
-    <section class="w-full mx-auto lg:w-[740px] py-44">
-      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+  <main class="px-4">
+    <SectionContainer class="py-44 pb-24">
+      <h1
+        class="text-white text-3xl md:text-4xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
         Hello, I'm Noel Caparrós
       </h1>
-      <h2 class="text-2xl text-wrap">
-        <span>+2 years of experience.</span><span class="text-yellow-200/90">
-          Sofwware developer</span
+      <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+        <span>+2 years of experience as a</span><span
+          class="text-cyan-200/100 font-bold"
+        >
+          Software developer</span
         >.
+        <br />
         <!-- TODO: Calculate from 2022 -->
-        <span class="text-red-200/90"
-          >Based in Sant Cugat del Vallés, Spain</span
-        >. <span class="opacity-80"
-          >Specialized in web application development.</span
+        <span>Based in Sant Cugat del Vallés, Spain</span>. <span
+          class="opacity-80">Specialized in web application development.</span
         >
       </h2>
 
-      <nav class="flex gap-x-4 mt-8">
+      <nav class="flex gap-4 mt-8 flex-wrap">
         <SocialPill
           href="https://www.linkedin.com/in/noel-caparros-burgos-8a5575248/"
         >
-          <LinkedInIcon class="size-6" />
+          <LinkedInIcon class="size-4 md:size-6" />
           LinkedIn
         </SocialPill>
-        <SocialPill href="">
-          <GithubIcon class="size-6" />
+        <SocialPill href="https://github.com/noelcaparros">
+          <GithubIcon class="size-4 md:size-6" />
           Github
         </SocialPill>
-        <SocialPill href="">
-          <GmailIcon class="size-6" />
+        <SocialPill href="mailto:noelcaparros1999@gmail.com">
+          <GmailIcon class="size-4 md:size-6" />
           noelcaparros1999@gmail.com
         </SocialPill>
       </nav>
-    </section>
+    </SectionContainer>
+    <SectionContainer id="experience">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Briefcase class="size-7" />
+        Experience
+      </h2>
+      <Experience class="flex gap-x-4 mt-8" />
+    </SectionContainer>
   </main>
 </Layout>
