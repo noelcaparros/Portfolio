@@ -3,9 +3,11 @@ import ThemeSwitch from "./ThemeSwitch.astro";
 ---
 
 <header
+  id="header-nav"
   class={`
-    flex justify-center items-center py-5 w-full xl:2-[1120px] mx-auto
-  `}
+     fixed flex justify-center items-center py-5 w-full xl:2-[1120px] mx-auto top-0 z-10
+     backdrop-blur-sm
+    `}
 >
   <nav class="flex flex-row gap-x-10 opacity-80">
     <a href="#top">Home</a>
