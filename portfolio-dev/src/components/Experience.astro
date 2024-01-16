@@ -1,17 +1,17 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro";
+const i18n = Astro.props.i18n;
+
 const EXPERIENCIE = [
   {
-    date: "Currently...",
-    title: "Software developer - Roche Diagnostics",
-    description:
-      "Collaborating within a team that operates under the SAFe framework and using React, I have contributed to the development of a software application aimed at monitoring and tracking cervical cancer in different countries, striving to make it a thing of the past.",
+    date: i18n.EXPERIENCE.ROCHE.DATE,
+    title: i18n.EXPERIENCE.ROCHE.TITLE,
+    description: i18n.EXPERIENCE.ROCHE.DESCRIPTION,
   },
   {
-    date: "February 2022",
-    title: "Apprenticeship - App2u",
-    description:
-      "At app2u, I had the opportunity to gain my first hands-on experience in the world of work, where I embarked on my journey of training in Angular.",
+    date: i18n.EXPERIENCE.APP2U.DATE,
+    title: i18n.EXPERIENCE.APP2U.TITLE,
+    description: i18n.EXPERIENCE.APP2U.DESCRIPTION,
   },
 ];
 ---

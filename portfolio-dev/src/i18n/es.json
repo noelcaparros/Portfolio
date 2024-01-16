@@ -1,0 +1,29 @@
+{
+  "SEO_TITLE": "Noel Caparrós - Portafolio",
+  "SEO_DESCRIPTION": "Portafolio de Noel Caparrós, desarrollador web y diseñador gráfico.",
+
+  "HOME": {
+    "HELLO_NAME": "Hola, soy Noel Caparrós",
+    "EXPERIENCE_TIME": "+2 años de experiencia como",
+    "JOB": "Desarrollador de software",
+    "BASED_IN": "Vivo en Sant Cugat del Vallès, Barcelona",
+    "SPECIALIZATION": "Especializado en el desarrollo de aplicaciones web.",
+    "LINKEDIN_LINK": "LinkedIn",
+    "GITHUB_LINK": "Github",
+    "EMAIL_LINK": "noelcaparros1999@gmail.com"
+  },
+
+  "EXPERIENCE": {
+    "TITLE": "Experiencia",
+    "ROCHE": {
+      "DATE": "Actualmente...",
+      "TITLE": "Desarrollador de software - Roche Diagnostics",
+      "DESCRIPTION": "Colaborando dentro de un equipo que opera bajo el marco de SAFe y usando React, he contribuido al desarrollo de una aplicación de software destinada a monitorear y rastrear el cáncer de cuello uterino en diferentes países, esforzándome por hacerlo cosa del pasado."
+    },
+    "APP2U": {
+      "DATE": "Febrero 2022",
+      "TITLE": "Aprendizaje - App2u",
+      "DESCRIPTION": "En app2u, tuve la oportunidad de obtener mi primera experiencia práctica en el mundo laboral, donde me embarqué en mi viaje de formación en Angular."
+    }
+  }
+}

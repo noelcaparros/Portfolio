@@ -1,0 +1,69 @@
+---
+import Layout from "../layouts/Layout.astro";
+import LinkedInIcon from "../assets/icons/LinkedIn.astro";
+import SocialPill from "../components/SocialPill.astro";
+import GithubIcon from "../assets/icons/Github.astro";
+import GmailIcon from "../assets/icons/Gmail.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Briefcase from "../assets/icons/Briefcase.astro";
+import { getI18n } from "../i18n";
+const { currentLocale = "en" } = Astro;
+const i18n = getI18n({ currentLocale });
+---
+
+<Layout title={i18n.SEO_TITLE} description={i18n.SEO_DESCRIPTION}>
+  <main class="px-4">
+    <SectionContainer class="py-44 pb-24">
+      <h1
+        class="dark:text-white text-3xl md:text-4xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
+        {i18n.HOME.HELLO_NAME}
+      </h1>
+      <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+        <span>{i18n.HOME.EXPERIENCE_TIME}</span><span
+          class="text-cyan-200/100 font-bold"
+        >
+          {i18n.HOME.JOB}</span
+        >.
+        <br />
+        <!-- TODO: Calculate from 2022 -->
+        <span>{i18n.HOME.BASED_IN}</span>. <span class="opacity-80"
+          >{i18n.HOME.SPECIALIZATION}</span
+        >
+      </h2>
+
+      <nav class="flex gap-4 mt-8 flex-wrap">
+        <SocialPill
+          href="https://www.linkedin.com/in/noel-caparros-burgos-8a5575248/"
+        >
+          <LinkedInIcon class="size-4 md:size-6" />
+          {i18n.HOME.LINKEDIN_LINK}
+        </SocialPill>
+        <SocialPill href="https://github.com/noelcaparros">
+          <GithubIcon class="size-4 md:size-6" />
+          {i18n.HOME.GITHUB_LINK}
+        </SocialPill>
+        <SocialPill href="mailto:noelcaparros1999@gmail.com">
+          <GmailIcon class="size-4 md:size-6" />
+          {i18n.HOME.GMAIL_LINK}
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+
+    <SectionContainer id="experience" class="pb-24">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Briefcase class="size-7" />
+        {i18n.EXPERIENCE.TITLE}
+      </h2>
+      <Experience i18n={i18n} class="flex gap-x-4 mt-8" />
+    </SectionContainer>
+
+    <SectionContainer id="about" class="pb-24">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Briefcase class="size-7" />
+        About me
+      </h2>
+    </SectionContainer>
+  </main>
+</Layout>

@@ -1,0 +1,29 @@
+{
+  "SEO_TITLE": "Noel Caparrós - Portfolio",
+  "SEO_DESCRIPTION": "Hire me as a software developer. I'm specialized in web application development.",
+
+  "HOME": {
+    "HELLO_NAME": "Hello, I'm Noel Caparrós",
+    "EXPERIENCE_TIME": "+2 years of experience as a",
+    "JOB": "Software Developer",
+    "BASED_IN": "Based in Sant Cugat del Vallés, Spain",
+    "SPECIALIZATION": "Specialized in web application development.",
+    "LINKEDIN_LINK": "LinkedIn",
+    "GITHUB_LINK": "Github",
+    "EMAIL_LINK": "noelcaparros1999@gmail.com"
+  },
+
+  "EXPERIENCE": {
+    "TITLE": "Experience",
+    "ROCHE": {
+      "DATE": "Currently...",
+      "TITLE": "Software developer - Roche Diagnostics",
+      "DESCRIPTION": "Collaborating within a team that operates under the SAFe framework and using React, I have contributed to the development of a software application aimed at monitoring and tracking cervical cancer in different countries, striving to make it a thing of the past."
+    },
+    "APP2U": {
+      "DATE": "February 2022",
+      "TITLE": "Apprenticeship - App2u",
+      "DESCRIPTION": "At app2u, I had the opportunity to gain my first hands-on experience in the world of work, where I embarked on my journey of training in Angular."
+    }
+  }
+}
