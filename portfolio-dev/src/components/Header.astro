@@ -1,22 +1,31 @@
 ---
 import LanguageDropdown from "./LanguageDropdown.astro";
 import ThemeSwitch from "./ThemeSwitch.astro";
+
+interface Props {
+  currentLocale: string;
+}
+
+const { currentLocale } = Astro.props;
 ---
 
 <header
   id="header-nav"
   class={`
-     fixed flex justify-center items-center py-5 w-full xl:2-[1120px] mx-auto top-0 z-10
-     backdrop-blur-sm
-    `}
+    fixed  flex justify-center items-center py-3 lg:py-5 w-full mx-auto top-0 z-10 backdrop-blur-sm
+  `}
 >
-  <nav class="flex flex-row gap-x-10 opacity-80">
-    <a class="hover:scale-110 transition" href="#top">Home</a>
-    <a class="hover:scale-110 transition" href="#experience">Experience</a>
-    <a class="hover:scale-110 transition" href="#about">About me</a>
-    <a class="hover:scale-110 transition" href="#contact">Contact</a>
+  <nav class="class flex">
+    <div
+      class="flex flex-row md:px-16 gap-x-5 lg:gap-x-10 opacity-80 flex-wrap left pl-6 max-w-80 md:max-w-fit lg:max-w-fit"
+    >
+      <a class="hover:scale-110 transition" href="#top">Home</a>
+      <a class="hover:scale-110 transition" href="#experience">Experience</a>
+      <a class="hover:scale-110 transition" href="#about">About me</a>
+      <a class="hover:scale-110 transition" href="#contact">Contact</a>
+    </div>
 
-    <LanguageDropdown />
-    <ThemeSwitch />
+    <LanguageDropdown currentLocale={currentLocale} />
+    <ThemeSwitch class="px-5" />
   </nav>
 </header>

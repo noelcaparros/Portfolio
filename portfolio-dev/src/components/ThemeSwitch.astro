@@ -2,7 +2,11 @@
 import MoonSun from "../assets/icons/MoonSun.astro";
 ---
 
-<button class="hover:scale-110 transition" id="themeToggle">
+<button
+  class={Astro.props.class}
+  class="hover:scale-110 transition px-5"
+  id="themeToggle"
+>
   <MoonSun />
 </button>
 

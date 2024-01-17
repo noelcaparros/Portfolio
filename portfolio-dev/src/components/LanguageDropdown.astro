@@ -1,20 +1,35 @@
 ---
 import DropdownArrow from "../assets/icons/DropdownArrow.astro";
+
+interface Props {
+  currentLocale: string;
+}
+const { currentLocale } = Astro.props;
+
+const selectedLanguage = {
+  en: "English",
+  es: "Español",
+  ca: "Català",
+};
 ---
 
 <button
   id="dropdownDefaultButton"
   data-dropdown-toggle="dropdown"
-  class="text-center inline-flex items-center hover:scale-110 transition"
+  class="text-center gap-2 inline-flex items-center hover:scale-110 transition min-w-18"
   type="button"
-  >Dropdown button
-  <DropdownArrow class="w-2.5 h-2.5 ms-3" />
+>
+  <img class="w-5 h-5" src=`src/assets/img/${currentLocale}.webp` />
+  <span class="hidden lg:block"
+    >{selectedLanguage[currentLocale as keyof typeof selectedLanguage]}</span
+  >
+  <DropdownArrow class="w-2.5 h-2.5" />
 </button>
 
 <!-- Dropdown menu -->
 <div
   id="dropdown"
-  class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+  class="z-10 hidden max-w-fit bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
 >
   <ul
     class="py-2 text-sm text-gray-700 dark:text-gray-200"
@@ -22,31 +37,24 @@ import DropdownArrow from "../assets/icons/DropdownArrow.astro";
   >
     <li>
       <a
-        href="#"
-        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-        >Dashboard</a
+        href="/"
+        class="flex flex-row items-center gap-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+        ><img class="w-5 h-5" src="src/assets/img/en.webp" />English
+      </a>
+    </li>
+    <li>
+      <a
+        href="es"
+        class="flex flex-row items-center gap-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+        ><img class="w-5 h-5" src="src/assets/img/es.webp" />Español</a
       >
     </li>
     <li>
       <a
-        href="#"
-        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-        >Settings</a
-      >
-    </li>
-    <li>
-      <a
-        href="#"
-        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-        >Earnings</a
-      >
-    </li>
-    <li>
-      <a
-        href="#"
-        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-        >Sign out</a
-      >
+        href="ca"
+        class="flex flex-row items-center gap-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+        ><img class="w-5 h-4" src="src/assets/img/ca.webp" />Català
+      </a>
     </li>
   </ul>
 </div>
