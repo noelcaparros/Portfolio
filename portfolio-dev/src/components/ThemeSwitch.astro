@@ -2,15 +2,33 @@
 import MoonSun from "../assets/icons/MoonSun.astro";
 ---
 
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+  integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
 <button
   class={Astro.props.class}
   class="hover:scale-110 transition px-5"
   id="themeToggle"
 >
-  <MoonSun />
+  <div class="btn">
+    <div class="btn__indicator">
+      <div class="btn__icon-container">
+        <i class="btn__icon fa-solid"></i>
+      </div>
+    </div>
+  </div>
 </button>
 
 <script is:inline>
+  const body = document.querySelector("body");
+  const btn = document.querySelector(".btn");
+  const icon = document.querySelector(".btn__icon");
+
   const theme = (() => {
     if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
       return localStorage.getItem("theme");
@@ -36,6 +54,38 @@ import MoonSun from "../assets/icons/MoonSun.astro";
     const isDark = element.classList.contains("dark");
     localStorage.setItem("theme", isDark ? "dark" : "light");
   };
+
+  if (icon && body) {
+    if (theme == "light") {
+      //if the dark mode was never activated
+      icon.classList.add("fa-sun");
+    } else if (theme == "dark") {
+      //if the dark mode is activated
+      body.classList.add("darkmode");
+      icon.classList.add("fa-moon");
+    }
+    //if the dark mode exists but is disabled
+    else icon.classList.add("fa-sun");
+  }
+
+  if (icon && body && btn) {
+    btn.addEventListener("click", () => {
+      body.classList.toggle("darkmode");
+      icon.classList.add("animated");
+
+      if (body.classList.contains("darkmode")) {
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+      } else {
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+      }
+
+      setTimeout(() => {
+        icon.classList.remove("animated");
+      }, 500);
+    });
+  }
 
   document
     .getElementById("themeToggle")

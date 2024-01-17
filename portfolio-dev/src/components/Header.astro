@@ -12,10 +12,10 @@ const { currentLocale } = Astro.props;
 <header
   id="header-nav"
   class={`
-    fixed  flex justify-center items-center py-3 lg:py-5 w-full mx-auto top-0 z-10 backdrop-blur-sm
+    fixed flex justify-center items-center py-3 lg:py-5 w-full mx-auto top-0 z-10 backdrop-blur-sm
   `}
 >
-  <nav class="class flex">
+  <nav class="class flex items-center justify-center">
     <div
       class="flex flex-row md:px-16 gap-x-5 lg:gap-x-10 opacity-80 flex-wrap left pl-6 max-w-80 md:max-w-fit lg:max-w-fit"
     >
@@ -26,6 +26,40 @@ const { currentLocale } = Astro.props;
     </div>
 
     <LanguageDropdown currentLocale={currentLocale} />
-    <ThemeSwitch class="px-5" />
+    <ThemeSwitch class="px-8" />
   </nav>
 </header>
+
+<style>
+  #header-nav.dark-mode {
+    animation: blur-light linear both;
+    animation-timeline: scroll();
+    animation-range: 0 500px;
+  }
+
+  #header-nav.dark-mode {
+    animation: blur-dark linear both;
+    animation-timeline: scroll();
+    animation-range: 0 500px;
+  }
+
+  @keyframes blur-light {
+    to {
+      box-shadow:
+        0px 5px 50px -5px rgba(252, 251, 251, 0.4),
+        0px 0px 0 1px rgba(251, 251, 251, 0.7);
+      background: rgba(251, 251, 251, 0.7);
+      backdrop-filter: blur(10px);
+    }
+  }
+
+  @keyframes blur-dark {
+    to {
+      box-shadow:
+        0px 5px 50px -5px rgba(0, 0, 0, 0.4),
+        0px 0px 0 1px rgba(0, 0, 0, 0.7);
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px);
+    }
+  }
+</style>
