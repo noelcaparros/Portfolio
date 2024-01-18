@@ -29,37 +29,3 @@ const { currentLocale } = Astro.props;
     <ThemeSwitch class="px-8" />
   </nav>
 </header>
-
-<style>
-  #header-nav.dark-mode {
-    animation: blur-light linear both;
-    animation-timeline: scroll();
-    animation-range: 0 500px;
-  }
-
-  #header-nav.dark-mode {
-    animation: blur-dark linear both;
-    animation-timeline: scroll();
-    animation-range: 0 500px;
-  }
-
-  @keyframes blur-light {
-    to {
-      box-shadow:
-        0px 5px 50px -5px rgba(252, 251, 251, 0.4),
-        0px 0px 0 1px rgba(251, 251, 251, 0.7);
-      background: rgba(251, 251, 251, 0.7);
-      backdrop-filter: blur(10px);
-    }
-  }
-
-  @keyframes blur-dark {
-    to {
-      box-shadow:
-        0px 5px 50px -5px rgba(0, 0, 0, 0.4),
-        0px 0px 0 1px rgba(0, 0, 0, 0.7);
-      background: rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(10px);
-    }
-  }
-</style>

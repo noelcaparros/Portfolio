@@ -58,48 +58,27 @@ const { title, currentLocale } = Astro.props;
     overscroll-behavior: none;
   }
 
-  #header-nav.dark-mode {
-    animation: blur-light linear both;
-    animation-timeline: scroll();
-    animation-range: 0 500px;
-  }
-
-  #header-nav.dark-mode {
+  /* #header-nav.dark-mode {
     animation: blur-dark linear both;
     animation-timeline: scroll();
     animation-range: 0 500px;
-  }
-
-  @keyframes blur-light {
-    to {
-      box-shadow:
-        0px 5px 50px -5px rgba(252, 251, 251, 0.4),
-        0px 0px 0 1px rgba(251, 251, 251, 0.7);
-      background: rgba(251, 251, 251, 0.7);
-      backdrop-filter: blur(10px);
-    }
-  }
+  } */
 
   @keyframes blur-dark {
     to {
       box-shadow:
         0px 5px 50px -5px rgba(0, 0, 0, 0.4),
-        0px 0px 0 1px rgba(0, 0, 0, 0.7);
-      background: rgba(0, 0, 0, 0.7);
+        0px 0px 0 0px rgba(0, 0, 0, 0.2);
+      background: rgba(0, 0, 0, 0.2);
       backdrop-filter: blur(10px);
+      font-size: 100, 200, 300, 400, 900;
     }
   }
 
-  @media (prefers-color-scheme: light) {
-    body {
-      color: rgba(0, 0, 0, 0.9);
-    }
-  }
-
-  @media (prefers-color-scheme: dark) {
-    body {
-      color: rgba(255, 255, 255, 0.9);
-    }
+  #header-nav {
+    animation: blur-dark linear both;
+    animation-timeline: scroll();
+    animation-range: 0 500px;
   }
 
   @media (prefers-reduced-motion: reduce) {
