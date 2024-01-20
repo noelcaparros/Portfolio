@@ -6,7 +6,9 @@
   referrerpolicy="no-referrer"
 />
 
-<button class="hover:scale-110 transition px-5 cursor-auto">
+<button
+  class=`${Astro.props.class} hover:scale-110 transition px-5 cursor-auto`
+>
   <div class="btn" id="themeToggle">
     <div class="btn__indicator">
       <div class="btn__icon-container">

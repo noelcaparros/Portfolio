@@ -16,14 +16,14 @@ const selectedLanguage = {
 <button
   id="dropdownDefaultButton"
   data-dropdown-toggle="dropdown"
-  class="text-center gap-2 inline-flex items-center hover:scale-110 transition min-w-18"
+  class="opacity-85 text-center gap-2 inline-flex items-center hover:scale-110 transition min-w-18"
   type="button"
 >
   <img class="w-5 h-5" src=`src/assets/img/${currentLocale}.webp` />
   <span class="hidden lg:block"
     >{selectedLanguage[currentLocale as keyof typeof selectedLanguage]}</span
   >
-  <DropdownArrow class="w-2.5 h-2.5" />
+  <DropdownArrow class="w-2.5 h-2.5 opacity-85" />
 </button>
 
 <!-- Dropdown menu -->
@@ -32,7 +32,7 @@ const selectedLanguage = {
   class="z-10 hidden max-w-fit bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
 >
   <ul
-    class="py-2 text-sm text-gray-700 dark:text-gray-200"
+    class="text-sm text-gray-700 dark:text-gray-200"
     aria-labelledby="dropdownDefaultButton"
   >
     <li>
