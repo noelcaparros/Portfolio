@@ -14,7 +14,8 @@ const { translations } = Astro.props;
 ---
 
 <section
-  class="max-h-screen max-w-full grid grid-cols-10 grid-rows-8 gap-4 mx-auto pt-24"
+  id="Bento-home"
+  class="grid grid-cols-10 grid-rows-8 gap-4 mx-auto pt-24"
 >
   <BentoPicture
     class="col-span-6 row-span-8"
@@ -33,7 +34,7 @@ const { translations } = Astro.props;
 
   <BentoItem
     class="col-span-4 row-span-4"
-    subtitle={translations.HOME.PORTFOLIO_DESCRIPTION}
+    text={translations.HOME.PORTFOLIO_DESCRIPTION}
   />
 
   <BentoSpecialItem
@@ -53,3 +54,9 @@ bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 eas
     </div>
   </BentoMap>
 </section>
+
+<style is:inline>
+  #Bento-home {
+    min-height: 70vh;
+  }
+</style>

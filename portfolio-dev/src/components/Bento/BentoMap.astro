@@ -24,12 +24,12 @@ const { title } = Astro.props;
   >
     <div
       class="absolute bottom-0 top-0 z-10 h-full w-full
-    bg-gradient-to-b from-transparent from-0% via-[#FFFFFF]/50 to-[#FFFFFF]/90 dark:via-[#000000]/50 dark:to-[#000000]"
+    bg-gradient-to-b from-transparent from-0% via-[#FFFFFF]/50 to-[#FFFFFF]/80 dark:via-[#000000]/50 dark:to-[#000000]"
     >
       {
         title && (
           <div class=" h-auto z-20  flex-col gap-1 p-4 text-sm md:px-6 absolute bottom-0  rounded-2xl rounded-b-none">
-            <h2 class="text-sm ">{title}</h2>
+            <h2 class="text-base ">{title}</h2>
           </div>
         )
       }

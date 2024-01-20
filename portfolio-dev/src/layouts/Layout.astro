@@ -24,8 +24,8 @@ const { title, currentLocale } = Astro.props;
   <body class="relative text-black dark:text-white">
     <div
       class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full
-      bg-white
-      bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,163,255,0.13)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)]
+      bg-neutral-50
+      bg-[radial-gradient(100%_50%_at_50%_0%,rgba(2,134,242,0.25)_0,rgba(2,134,242,0)_50%,rgba(2,134,242,0)_100%)]
       dark:bg-neutral-950
        dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
     >
@@ -58,11 +58,11 @@ const { title, currentLocale } = Astro.props;
     overscroll-behavior: none;
   }
 
-  /* #header-nav.dark-mode {
-    animation: blur-dark linear both;
-    animation-timeline: scroll();
-    animation-range: 0 500px;
-  } */
+  #home {
+    min-height: 100vh;
+    margin-top: 2%;
+    min-width: 70vw;
+  }
 
   @keyframes blur-dark {
     to {

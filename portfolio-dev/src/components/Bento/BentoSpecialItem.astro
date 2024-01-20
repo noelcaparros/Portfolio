@@ -15,7 +15,7 @@ const { title, subtitle } = Astro.props;
   backdrop-blur-md
   shadow-inner shadow-white/10
   overflow-hidden
-  group
+  group 
 `}
 >
   <slot name="image" />
@@ -28,17 +28,17 @@ const { title, subtitle } = Astro.props;
       class="inline-flex h-full w-full items-center justify-center rounded-xl bg-white dark:bg-slate-950 px-3 py-1 text-sm font-medium backdrop-blur-3xl"
     >
       <div
-        class="relative z-20 flex h-full flex-col justify-center gap-1 p-4 text-lg hover:scale-110 transition"
+        class="relative z-20 flex h-full flex-col justify-center gap-1 p-4 text-lg hover:scale-110 transition ease-out duration-300"
       >
         <h1
-          class="text-7xl uppercase font-black text-gradient bg-gradient-to-r from-[#86f4f7] via-[#0286f2] to-[#E2CBFF] dark:from-[#b2a8fd] dark:via-[#8678f9] dark:to-[#c7d2fe] bg-[200%_auto] bg-clip-text text-transparent"
+          class="text-7xl lg:text-8xl uppercase font-black text-gradient bg-gradient-to-r from-[#86f4f7] via-[#0286f2] to-[#E2CBFF] dark:from-[#b2a8fd] dark:via-[#8678f9] dark:to-[#c7d2fe] bg-[200%_auto] bg-clip-text text-transparent"
         >
           {title}
         </h1>
 
         {
           subtitle && (
-            <h2 class="text-base lg:text-base text-wrap max-w-[700px] opacity-85">
+            <h2 class="text-base  lg:text-xl text-wrap max-w-[700px] opacity-85">
               {subtitle}
             </h2>
           )

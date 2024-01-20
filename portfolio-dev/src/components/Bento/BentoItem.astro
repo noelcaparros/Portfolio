@@ -2,10 +2,10 @@
 interface Props {
   class?: string;
   title?: string;
-  subtitle?: string;
+  text?: string;
 }
 
-const { title, subtitle } = Astro.props;
+const { text } = Astro.props;
 ---
 
 <article
@@ -26,15 +26,11 @@ const { title, subtitle } = Astro.props;
   </div> -->
 
   <div
-    class="opacity-85 relative z-20 flex h-full select-none flex-col justify-center gap-1 p-4 text-lg md:p-9 bg-white dark:bg-slate-950"
+    class="text-pretty opacity-85 relative z-20 flex h-full select-none flex-col justify-center gap-1 p-4 text-lg md:p-9 bg-white dark:bg-slate-950"
   >
-    <h2 class="text-balance text-2xl font-semibold">
-      {title}
-    </h2>
-
     {
-      subtitle && (
-        <h2 class="text-base lg:text-lg text-wrap max-w-[700px]">{subtitle}</h2>
+      text && (
+        <h2 class="text-base lg:text-lg text-wrap max-w-[700px]">{text}</h2>
       )
     }
   </div>
