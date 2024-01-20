@@ -3,8 +3,12 @@ import DropdownArrow from "../assets/icons/DropdownArrow.astro";
 
 interface Props {
   currentLocale: string;
+  translations: {
+    [key: string]: any;
+  };
 }
-const { currentLocale } = Astro.props;
+
+const { currentLocale, translations } = Astro.props;
 
 const selectedLanguage = {
   en: "English",
@@ -38,22 +42,28 @@ const selectedLanguage = {
     <li>
       <a
         href="/"
-        class="flex flex-row items-center gap-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-        ><img class="w-5 h-5" src="src/assets/img/en.webp" />English
+        class="flex flex-row items-center gap-2 px-4 py-2 hover:bg-gray-100 rounded-t-lg dark:hover:bg-gray-600 dark:hover:text-white"
+        ><img class="w-5 h-5" src="src/assets/img/en.webp" />{
+          translations.HEADER.LANGUAGE.EN
+        }
       </a>
     </li>
     <li>
       <a
         href="es"
         class="flex flex-row items-center gap-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-        ><img class="w-5 h-5" src="src/assets/img/es.webp" />Español</a
+        ><img class="w-5 h-5" src="src/assets/img/es.webp" />{
+          translations.HEADER.LANGUAGE.ES
+        }</a
       >
     </li>
     <li>
       <a
         href="ca"
-        class="flex flex-row items-center gap-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-        ><img class="w-5 h-4" src="src/assets/img/ca.webp" />Català
+        class="flex flex-row items-center gap-2 px-4 py-2 hover:bg-gray-100 rounded-b-lg dark:hover:bg-gray-600 dark:hover:text-white"
+        ><img class="w-5 h-4" src="src/assets/img/ca.webp" />{
+          translations.HEADER.LANGUAGE.CA
+        }
       </a>
     </li>
   </ul>

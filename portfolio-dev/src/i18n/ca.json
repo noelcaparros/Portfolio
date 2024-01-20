@@ -1,12 +1,26 @@
 {
   "SEO_TITLE": "Noel Caparrós | Portafoli",
   "SEO_DESCRIPTION": "Portafoli de Noel Caparrós, desenvolupador web i dissenyador gràfic a Barcelona.",
+
+  "HEADER": {
+    "HOME": "Inici",
+    "EXPERIENCE": "Experiència",
+    "ABOUT_ME": "Sobre mi",
+    "CONTACT": "Contacte",
+    "LANGUAGE": {
+      "CA": "Català",
+      "ES": "Español",
+      "EN": "English"
+    }
+  },
+
   "HOME": {
-    "HELLO_NAME": "Hola, sóc Noel Caparrós",
-    "EXPERIENCE_TIME": "+2 anys d'experiencia com a",
-    "JOB": "Desenvolupador de software",
-    "BASED_IN": "Visc a Sant Cugat del Vallès, Barcelona",
-    "SPECIALIZATION": "Especialitzat en el desenvolupament d'aplicacions web.",
+    "PORTFOLIO_NAME": "Noel Caparrós Burgos",
+    "PORTFOLIO_SUBTITLE": "Enginyer de software",
+    "PORTFOLIO_DESCRIPTION": "Com a enginyer de software, la meva especialització es centra en el front-end. Sempre estic buscant nous desafiaments per millorar i perfeccionar les meves habilitats.",
+    "EXPERIENCE_TIME_TITLE": "+2",
+    "EXPERIENCE_TIME_DESCRIPTION": "Anys d'experiència",
+    "LOCATION": "Des de Sant Cugat, ES",
     "LINKEDIN_LINK": "LinkedIn",
     "GITHUB_LINK": "Github",
     "EMAIL_LINK": "noelcaparros1999@gmail.com"

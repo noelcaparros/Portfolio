@@ -2,12 +2,25 @@
   "SEO_TITLE": "Noel Caparrós | Portfolio",
   "SEO_DESCRIPTION": "Hire me as a software developer. I'm specialized in web application development.",
 
+  "HEADER": {
+    "HOME": "Home",
+    "EXPERIENCE": "Experience",
+    "ABOUT_ME": "About me",
+    "CONTACT": "Contact",
+    "LANGUAGE": {
+      "CA": "Català",
+      "ES": "Español",
+      "EN": "English"
+    }
+  },
+
   "HOME": {
-    "HELLO_NAME": "Hello, I'm Noel Caparrós",
-    "EXPERIENCE_TIME": "+2 years of experience as a",
-    "JOB": "Software Developer",
-    "BASED_IN": "Based in Sant Cugat del Vallés, Spain",
-    "SPECIALIZATION": "Specialized in web application development.",
+    "PORTFOLIO_NAME": "Noel Caparrós Burgos",
+    "PORTFOLIO_SUBTITLE": "Software engineer",
+    "PORTFOLIO_DESCRIPTION": "As a software engineer, my specialization lies in web development. I am consistently seeking fresh challenges to further refine and enhance my skills.",
+    "EXPERIENCE_TIME_TITLE": "+2",
+    "EXPERIENCE_TIME_DESCRIPTION": "Years of experience",
+    "LOCATION": "From Sant Cugat, ES",
     "LINKEDIN_LINK": "LinkedIn",
     "GITHUB_LINK": "Github",
     "EMAIL_LINK": "noelcaparros1999@gmail.com"

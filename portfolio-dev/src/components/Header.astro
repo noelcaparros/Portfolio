@@ -1,4 +1,5 @@
 ---
+import { getI18n } from "../i18n";
 import LanguageDropdown from "./LanguageDropdown.astro";
 import ThemeSwitch from "./ThemeSwitch.astro";
 
@@ -7,6 +8,7 @@ interface Props {
 }
 
 const { currentLocale } = Astro.props;
+const i18n = getI18n({ currentLocale });
 ---
 
 <header
@@ -19,13 +21,19 @@ const { currentLocale } = Astro.props;
     <div
       class="flex flex-row md:px-16 gap-x-5 lg:gap-x-10 opacity-80 flex-wrap left pl-6 max-w-80 md:max-w-fit lg:max-w-fit md:text-xl"
     >
-      <a class="hover:scale-110 transition" href="#top">Home</a>
-      <a class="hover:scale-110 transition" href="#experience">Experience</a>
-      <a class="hover:scale-110 transition" href="#about">About me</a>
-      <a class="hover:scale-110 transition" href="#contact">Contact</a>
+      <a class="hover:scale-110 transition" href="#top">{i18n.HEADER.HOME}</a>
+      <a class="hover:scale-110 transition" href="#experience"
+        >{i18n.HEADER.EXPERIENCE}</a
+      >
+      <a class="hover:scale-110 transition" href="#about"
+        >{i18n.HEADER.ABOUT_ME}</a
+      >
+      <a class="hover:scale-110 transition" href="#contact"
+        >{i18n.HEADER.CONTACT}</a
+      >
     </div>
 
-    <LanguageDropdown currentLocale={currentLocale} />
+    <LanguageDropdown currentLocale={currentLocale} translations={i18n} />
   </nav>
   <ThemeSwitch class="right-0 absolute" />
 </header>

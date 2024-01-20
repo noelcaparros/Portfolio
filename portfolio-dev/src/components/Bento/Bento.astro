@@ -3,6 +3,14 @@ import BentoPicture from "../Bento/BentoPicture.astro";
 import BentoSpecialItem from "../Bento/BentoSpecialItem.astro";
 import BentoItem from "./BentoItem.astro";
 import BentoMap from "./BentoMap.astro";
+
+interface Props {
+  translations: {
+    [key: string]: any;
+  };
+}
+
+const { translations } = Astro.props;
 ---
 
 <section
@@ -10,8 +18,8 @@ import BentoMap from "./BentoMap.astro";
 >
   <BentoPicture
     class="col-span-6 row-span-8"
-    title="Noel Caparrós Burgos"
-    subtitle="Software Engineer"
+    title={translations.HOME.PORTFOLIO_NAME}
+    subtitle={translations.HOME.PORTFOLIO_SUBTITLE}
   >
     <div
       slot="image"
@@ -25,16 +33,16 @@ import BentoMap from "./BentoMap.astro";
 
   <BentoItem
     class="col-span-4 row-span-4"
-    subtitle="As a software engineer, my specialization lies in web development, I am consistently seeking fresh challenges to further refine and enhance my skills."
+    subtitle={translations.HOME.PORTFOLIO_DESCRIPTION}
   />
 
   <BentoSpecialItem
     class="col-span-2 row-span-4 backdrop-blur-sm text-center relative p-[2px] dark:p-[1px]"
-    title="+2"
-    subtitle="Años de experiencia"
+    title={translations.HOME.EXPERIENCE_TIME_TITLE}
+    subtitle={translations.HOME.EXPERIENCE_TIME_DESCRIPTION}
   />
 
-  <BentoMap class="col-span-2 row-span-4" title="From Sant Cugat, ES">
+  <BentoMap class="col-span-2 row-span-4" title={translations.HOME.LOCATION}>
     <div
       slot="image"
       class="background transition-scale absolute bottom-0 left-0 top-0 cursor-pointer
