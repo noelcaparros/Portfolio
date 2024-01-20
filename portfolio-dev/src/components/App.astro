@@ -1,14 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import LinkedInIcon from "../assets/icons/LinkedIn.astro";
 import SocialPill from "../components/SocialPill.astro";
+import LinkedInIcon from "../assets/icons/LinkedIn.astro";
 import GithubIcon from "../assets/icons/Github.astro";
 import GmailIcon from "../assets/icons/Gmail.astro";
 import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Briefcase from "../assets/icons/Briefcase.astro";
 import { getI18n } from "../i18n";
-import Bento from "./Bento.astro";
+import Bento from "./Bento/Bento.astro";
 const { currentLocale = "en" } = Astro;
 const i18n = getI18n({ currentLocale });
 ---
@@ -19,9 +19,27 @@ const i18n = getI18n({ currentLocale });
   currentLocale={currentLocale}
 >
   <main class="px-4">
-    <SectionContainer><Bento /></SectionContainer>
+    <SectionContainer>
+      <Bento />
+      <nav class="flex gap-4 mt-8 flex-wrap">
+        <SocialPill
+          href="https://www.linkedin.com/in/noel-caparros-burgos-8a5575248/"
+        >
+          <LinkedInIcon class="size-4 md:size-6" />
+          {i18n.HOME.LINKEDIN_LINK}
+        </SocialPill>
+        <SocialPill href="https://github.com/noelcaparros">
+          <GithubIcon class="size-4 md:size-6" />
+          {i18n.HOME.GITHUB_LINK}
+        </SocialPill>
+        <SocialPill href="mailto:noelcaparros1999@gmail.com">
+          <GmailIcon class="size-4 md:size-6" />
+          {i18n.HOME.EMAIL_LINK}
+        </SocialPill>
+      </nav>
+    </SectionContainer>
 
-    <SectionContainer class="py-44 pb-24">
+    <!-- <SectionContainer class="py-44 pb-24">
       <h1
         class="dark:text-white text-3xl md:text-4xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
       >
@@ -34,7 +52,7 @@ const i18n = getI18n({ currentLocale });
           {i18n.HOME.JOB}</span
         >.
         <br />
-        <!-- TODO: Calculate from 2022 -->
+  
         <span>{i18n.HOME.BASED_IN}</span>. <span class="opacity-80"
           >{i18n.HOME.SPECIALIZATION}</span
         >
@@ -56,9 +74,9 @@ const i18n = getI18n({ currentLocale });
           {i18n.HOME.EMAIL_LINK}
         </SocialPill>
       </nav>
-    </SectionContainer>
+    </SectionContainer> -->
 
-    <SectionContainer id="experience" class="pb-24">
+    <SectionContainer id="experience" class="py-24">
       <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
         <Briefcase class="size-7" />
         {i18n.EXPERIENCE.TITLE}

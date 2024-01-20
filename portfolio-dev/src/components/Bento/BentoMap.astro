@@ -1,0 +1,39 @@
+---
+interface Props {
+  class?: string;
+  title?: string;
+}
+
+const { title } = Astro.props;
+---
+
+<article
+  class={`
+  ${Astro.props.class}
+  relative rounded-xl
+  backdrop-blur-md
+  border border-black/10
+  shadow-inner shadow-white/10
+  overflow-hidden
+  group
+`}
+>
+  <a
+    target="_blank"
+    href="https://www.google.com/maps/place/Sant+Cugat+del+Vall%C3%A8s,+Barcelona/@41.4674492,2.0647584,12z/data=!3m1!4b1!4m6!3m5!1s0x12a4912b6595f335:0x400fae021a40eb0!8m2!3d41.4664438!4d2.0701279!16zL20vMDQ4anR5?entry=ttu"
+  >
+    <div
+      class="absolute bottom-0 top-0 z-10 h-full w-full
+    bg-gradient-to-b from-transparent from-0% via-[#FFFFFF]/50 to-[#FFFFFF]/90 dark:via-[#000000]/50 dark:to-[#000000]"
+    >
+      {
+        title && (
+          <div class=" h-auto z-20  flex-col gap-1 p-4 text-sm md:px-6 absolute bottom-0  rounded-2xl rounded-b-none">
+            <h2 class="text-sm ">{title}</h2>
+          </div>
+        )
+      }
+    </div>
+    <slot name="image" />
+  </a>
+</article>

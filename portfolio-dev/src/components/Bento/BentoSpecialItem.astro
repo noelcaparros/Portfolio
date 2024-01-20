@@ -1,0 +1,64 @@
+---
+interface Props {
+  class?: string;
+  title?: string;
+  subtitle?: string;
+}
+
+const { title, subtitle } = Astro.props;
+---
+
+<article
+  class={`
+  ${Astro.props.class}
+  relative rounded-xl
+  backdrop-blur-md
+  shadow-inner shadow-white/10
+  overflow-hidden
+  group
+`}
+>
+  <slot name="image" />
+  <a href="#experience">
+    <span
+      class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#86f4f7_0%,#0286f2_50%,#E2CBFF_100%)]
+      dark:bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"
+    ></span>
+    <span
+      class="inline-flex h-full w-full items-center justify-center rounded-xl bg-white dark:bg-slate-950 px-3 py-1 text-sm font-medium backdrop-blur-3xl"
+    >
+      <div
+        class="relative z-20 flex h-full flex-col justify-center gap-1 p-4 text-lg md:p-6 hover:scale-110 transition"
+      >
+        <h1
+          class="text-7xl uppercase font-black text-gradient bg-gradient-to-r from-[#86f4f7] via-[#0286f2] to-[#E2CBFF] dark:from-[#b2a8fd] dark:via-[#8678f9] dark:to-[#c7d2fe] bg-[200%_auto] bg-clip-text text-transparent"
+        >
+          {title}
+        </h1>
+
+        {
+          subtitle && (
+            <h2 class="text-base lg:text-sm text-wrap max-w-[700px]">
+              {subtitle}
+            </h2>
+          )
+        }
+      </div>
+    </span>
+  </a>
+
+  <style is:inline>
+    @keyframes text-gradient {
+      to {
+        background-position: 200% center;
+      }
+    }
+
+    .text-gradient {
+      -webkit-background-clip: text;
+      color: transparent;
+
+      animation: text-gradient 2.5s linear infinite;
+    }
+  </style>
+</article>

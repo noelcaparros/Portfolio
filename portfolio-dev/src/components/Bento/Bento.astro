@@ -1,0 +1,47 @@
+---
+import BentoPicture from "../Bento/BentoPicture.astro";
+import BentoSpecialItem from "../Bento/BentoSpecialItem.astro";
+import BentoItem from "./BentoItem.astro";
+import BentoMap from "./BentoMap.astro";
+---
+
+<section
+  class="max-h-screen max-w-full grid grid-cols-10 grid-rows-8 gap-4 mx-auto pt-24"
+>
+  <BentoPicture
+    class="col-span-6 row-span-8"
+    title="Noel Caparrós Burgos"
+    subtitle="Software Engineer"
+  >
+    <div
+      slot="image"
+      class="background transition-scale absolute bottom-0 left-0 top-0
+      -z-10 h-full w-full
+      bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
+      style="background-image: url('src/assets/img/noel.webp')"
+    >
+    </div>
+  </BentoPicture>
+
+  <BentoItem
+    class="col-span-4 row-span-4"
+    subtitle="As a software engineer, my specialization lies in web development, I am consistently seeking fresh challenges to further refine and enhance my skills."
+  />
+
+  <BentoSpecialItem
+    class="col-span-2 row-span-4 backdrop-blur-sm text-center relative p-[2px] dark:p-[1px]"
+    title="+2"
+    subtitle="Años de experiencia"
+  />
+
+  <BentoMap class="col-span-2 row-span-4" title="From Sant Cugat, ES">
+    <div
+      slot="image"
+      class="background transition-scale absolute bottom-0 left-0 top-0 cursor-pointer
+-z-10 h-full w-full
+bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-150"
+      style="background-image: url('src/assets/img/locationApple.webp')"
+    >
+    </div>
+  </BentoMap>
+</section>
