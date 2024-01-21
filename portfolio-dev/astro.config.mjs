@@ -12,4 +12,6 @@ export default defineConfig({
       prefixDefaultLocale: false, // en: /, es: /es, ca: /ca
     },
   },
+  site: "https://noelcaparros.github.io",
+  base: "/portfolio",
 });
