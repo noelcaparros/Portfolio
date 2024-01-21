@@ -29,14 +29,16 @@
   "EXPERIENCE": {
     "TITLE": "Experience",
     "ROCHE": {
-      "DATE": "Currently...",
+      "DATE": "April 2022 - Present",
       "TITLE": "Software developer - Roche Diagnostics",
-      "DESCRIPTION": "Collaborating within a team that operates under the SAFe framework and using React, I have contributed to the development of a software application aimed at monitoring and tracking cervical cancer in different countries, striving to make it a thing of the past."
+      "DESCRIPTION": "Collaborating within a team that operates under the SAFe framework and using React, I have contributed to the development of a software application aimed at monitoring and tracking cervical cancer in different countries, striving to make it a thing of the past.",
+      "VISIT_BUTTON": "Visit Roche"
     },
     "APP2U": {
-      "DATE": "February 2022",
+      "DATE": "October 2021 - February 2022",
       "TITLE": "Apprenticeship - App2u",
-      "DESCRIPTION": "At app2u, I had the opportunity to gain my first hands-on experience in the world of work, where I embarked on my journey of training in Angular."
+      "DESCRIPTION": "At app2u, I had the opportunity to gain my first hands-on experience in the world of work, where I embarked on my journey of training in Angular.",
+      "VISIT_BUTTON": "Visit App2u"
     }
   }
 }

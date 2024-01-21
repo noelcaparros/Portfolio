@@ -29,14 +29,16 @@
   "EXPERIENCE": {
     "TITLE": "Experiència",
     "ROCHE": {
-      "DATE": "Actualment...",
+      "DATE": "Abril 2022 - Present",
       "TITLE": "Desenvolupador de software - Roche Diagnostics",
-      "DESCRIPTION": "Col·laborant dins d'un equip que opera sota el marc de SAFe i usant React, he contribuït al desenvolupament d'una aplicació de software destinada a monitoritzar i rastrejar el càncer de coll uterí en diferents països, esforçant-me per fer-ho cosa del passat."
+      "DESCRIPTION": "Col·laborant dins d'un equip que opera sota el marc de SAFe i usant React, he contribuït al desenvolupament d'una aplicació de software destinada a monitoritzar i rastrejar el càncer de coll uterí en diferents països, esforçant-me per fer-ho cosa del passat.",
+      "VISIT_BUTTON": "Visita Roche"
     },
     "APP2U": {
-      "DATE": "Febrer 2022",
+      "DATE": "Octubre 2021 - Febrer 2022",
       "TITLE": "Aprenentatge - App2u",
-      "DESCRIPTION": "A app2u, vaig tenir l'oportunitat d'obtenir la meva primera experiència pràctica en el món laboral, on vaig embarcar-me en el meu viatge de formació en Angular."
+      "DESCRIPTION": "A app2u, vaig tenir l'oportunitat d'obtenir la meva primera experiència pràctica en el món laboral, on vaig embarcar-me en el meu viatge de formació en Angular.",
+      "VISIT_BUTTON": "Visita App2u"
     }
   }
 }

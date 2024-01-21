@@ -1,0 +1,42 @@
+---
+import BentoWorkplace from "./BentoWorkplace.astro";
+
+interface Props {
+  translations: {
+    [key: string]: any;
+  };
+}
+
+const { translations } = Astro.props;
+---
+
+<h2
+  class="text-3xl font-semibold mb-6 flex gap-x-3 items-center justify-center py-6"
+>
+  <!-- <Briefcase class="size-9" /> -->
+  {translations.EXPERIENCE.TITLE}
+</h2>
+
+<div
+  id="Bento-experience"
+  class="grid grid-cols-10 grid-rows-8 gap-10 mx-auto opacity-90"
+>
+  <BentoWorkplace
+    type="roche"
+    class="col-span-10 row-span-4"
+    title={translations.EXPERIENCE.ROCHE.TITLE}
+    description={translations.EXPERIENCE.ROCHE.DESCRIPTION}
+    date={translations.EXPERIENCE.ROCHE.DATE}
+    visitLink="https://diagnostics.roche.com/"
+    visitButton={translations.EXPERIENCE.ROCHE.VISIT_BUTTON}
+  />
+  <BentoWorkplace
+    type="app2u"
+    class="col-span-10 row-span-4"
+    title={translations.EXPERIENCE.APP2U.TITLE}
+    description={translations.EXPERIENCE.APP2U.DESCRIPTION}
+    date={translations.EXPERIENCE.APP2U.DATE}
+    visitLink="https://www.app2u.es"
+    visitButton={translations.EXPERIENCE.APP2U.VISIT_BUTTON}
+  />
+</div>

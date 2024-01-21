@@ -1,6 +1,6 @@
 ---
-import BentoPicture from "../Bento/BentoPicture.astro";
-import BentoSpecialItem from "../Bento/BentoSpecialItem.astro";
+import BentoPicture from "./BentoPicture.astro";
+import BentoSpecialItem from "./BentoSpecialItem.astro";
 import BentoItem from "./BentoItem.astro";
 import BentoMap from "./BentoMap.astro";
 
@@ -13,10 +13,7 @@ interface Props {
 const { translations } = Astro.props;
 ---
 
-<section
-  id="Bento-home"
-  class="grid grid-cols-10 grid-rows-8 gap-4 mx-auto pt-24"
->
+<div id="Bento-home" class="grid grid-cols-10 grid-rows-8 gap-4 mx-auto pt-16">
   <BentoPicture
     class="col-span-6 row-span-8"
     title={translations.HOME.PORTFOLIO_NAME}
@@ -53,7 +50,7 @@ bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 eas
     >
     </div>
   </BentoMap>
-</section>
+</div>
 
 <style is:inline>
   #Bento-home {

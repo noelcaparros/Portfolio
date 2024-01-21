@@ -9,7 +9,9 @@ import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Briefcase from "../assets/icons/Briefcase.astro";
 import { getI18n } from "../i18n";
-import Bento from "./Bento/Bento.astro";
+import BentoHome from "./BentoHome/BentoHome.astro";
+import BentoExperience from "./BentoExperience/BentoExperience.astro";
+
 const { currentLocale = "en" } = Astro;
 const i18n = getI18n({ currentLocale });
 ---
@@ -22,7 +24,7 @@ const i18n = getI18n({ currentLocale });
   <main class="px-4">
     <SectionContainer class="flex flex-col justify-evenly" id="home">
       <div>
-        <Bento translations={i18n} />
+        <BentoHome translations={i18n} />
         <nav class="flex gap-4 mt-8 flex-wrap">
           <SocialPill
             href="https://www.linkedin.com/in/noel-caparros-burgos-8a5575248/"
@@ -51,17 +53,6 @@ const i18n = getI18n({ currentLocale });
   </main>
 </Layout>
 
-<SectionContainer id="experience">
-  <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
-    <Briefcase class="size-7" />
-    {i18n.EXPERIENCE.TITLE}
-  </h2>
-  <Experience i18n={i18n} class="flex gap-x-4 mt-8" />
-</SectionContainer>
-
-<SectionContainer id="about" class="pb-24">
-  <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
-    <Briefcase class="size-7" />
-    About me
-  </h2>
+<SectionContainer id="experience" class="mb-20">
+  <BentoExperience translations={i18n} />
 </SectionContainer>

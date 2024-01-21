@@ -26,12 +26,20 @@ const { text } = Astro.props;
   </div> -->
 
   <div
-    class="text-pretty opacity-85 relative z-20 flex h-full select-none flex-col justify-center gap-1 p-4 text-lg md:p-9 bg-white dark:bg-slate-950"
+    class="leading-10 text-pretty opacity-85 relative z-20 flex h-full select-none flex-col justify-center gap-1 p-4 text-lg md:p-9 bg-white dark:bg-slate-950"
   >
     {
       text && (
-        <h2 class="text-base lg:text-lg text-wrap max-w-[700px]">{text}</h2>
+        <h2 class="portfolio-description text-base lg:text-xl font-medium text-wrap  max-w-[700px]">
+          {text}
+        </h2>
       )
     }
   </div>
 </article>
+
+<style is:inline>
+  .portfolio-description {
+    line-height: 2.2rem;
+  }
+</style>

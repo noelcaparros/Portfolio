@@ -1,0 +1,75 @@
+---
+import Visit from "../../assets/icons/Visit.astro";
+
+interface Props {
+  type: string;
+  date: string;
+  title: string;
+  description: string;
+  class: string;
+  visitLink: string;
+  visitButton: string;
+}
+
+const { date, type, title, description, visitButton, visitLink } = Astro.props;
+---
+
+<article
+  class={`
+  ${Astro.props.class}
+  rounded-xl
+  border border-black/10
+  shadow-inner shadow-white/10
+  overflow-hidden
+`}
+>
+  <div
+    class="hover-container flex flex-row bg-white dark:bg-zinc-900 min-h-full"
+  >
+    <div class=`${type}-image-container w-96`></div>
+    <div class="flex-col p-8 max-w-3xl flex justify-evenly">
+      <h1 class="text-xl lg:text-2xl text-wrap pb-4 font-semibold">{title}</h1>
+      <h2 class="text-xl lg:text-xl text-wrap pb-4 font-semibold">{date}</h2>
+      <div class="text-base lg:text-lg">{description}</div>
+      <a
+        target="_blank"
+        href={visitLink}
+        id="visit-button"
+        class="font-bold p-3 text-white rounded-xl mt-3 flex self-end items-center"
+        ><span>{visitButton}</span><Visit class="ml-2" />
+      </a>
+    </div>
+  </div>
+</article>
+
+<style is:inline>
+  #visit-button {
+    background-color: rgb(5 104 254);
+  }
+
+  .roche-image-container {
+    background: url("src/assets/img/rocheLogo.webp") center no-repeat;
+    background-size: cover;
+
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .hover-container:hover .roche-image-container {
+    background-image: url("src/assets/img/rochePicture.webp");
+  }
+
+  .app2u-image-container {
+    background: url("src/assets/img/app2uLogo.webp") center no-repeat;
+    background-size: cover;
+
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .hover-container:hover .app2u-image-container {
+    background-image: url("src/assets/img/app2uPicture.webp");
+  }
+</style>
