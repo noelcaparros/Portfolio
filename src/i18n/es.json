@@ -40,5 +40,13 @@
       "DESCRIPTION": "En app2u, tuve la oportunidad de obtener mi primera experiencia práctica en el mundo laboral, donde me embarqué en mi viaje de formación en Angular.",
       "VISIT_BUTTON": "Visita App2u"
     }
+  },
+
+  "ABOUT_ME": {
+    "TITLE": "About me",
+    "DESCRIPTION1": "Since I was a child, I have always had a great passion for technology. In 2012, I decided to study software development, and the following year, I landed my first job in this field. ",
+    "DESCRIPTION2": "Along this journey, I have discovered that I love what I do, as web application development allows me to use my skills to design solutions that users can enjoy.",
+    "DESCRIPTION3": "Part of my professional career has been as a Freelance Developer for various clients. I have a great knowledge of developing modular and scalable solutions that adapt to the needs and requirements of each project. ",
+    "DESCRIPTION4": "Thanks to this, I have had the opportunity to work with clients from all around the world, ranging from small to large enterprises."
   }
 }
