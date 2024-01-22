@@ -1,6 +1,8 @@
 ---
 import "@fontsource/quicksand";
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { getI18n } from "../i18n";
 
 interface Props {
   title: string;
@@ -9,6 +11,8 @@ interface Props {
 }
 
 const { title, currentLocale } = Astro.props;
+
+const i18n = getI18n({ currentLocale });
 ---
 
 <!doctype html>
@@ -30,8 +34,9 @@ const { title, currentLocale } = Astro.props;
        dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
     >
     </div>
-    <Header currentLocale={currentLocale} />
+    <Header translations={i18n} currentLocale={currentLocale} />
     <slot />
+    <Footer translations={i18n} />
   </body>
 </html>
 <style is:global>

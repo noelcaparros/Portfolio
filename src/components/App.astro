@@ -5,12 +5,11 @@ import ChevronDown from "../assets/icons/ChevronDown.astro";
 import LinkedInIcon from "../assets/icons/LinkedIn.astro";
 import GithubIcon from "../assets/icons/Github.astro";
 import GmailIcon from "../assets/icons/Gmail.astro";
-import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
-import Briefcase from "../assets/icons/Briefcase.astro";
 import { getI18n } from "../i18n";
 import BentoHome from "./BentoHome/BentoHome.astro";
 import BentoExperience from "./BentoExperience/BentoExperience.astro";
+import AboutMe from "./AboutMe.astro";
 
 const { currentLocale = "en" } = Astro;
 const i18n = getI18n({ currentLocale });
@@ -50,9 +49,11 @@ const i18n = getI18n({ currentLocale });
         <ChevronDown id="experience" />
       </a>
     </SectionContainer>
+    <SectionContainer id="" class="mb-20">
+      <BentoExperience translations={i18n} />
+    </SectionContainer>
+    <SectionContainer id="about" class="mb-20">
+      <AboutMe translations={i18n} />
+    </SectionContainer>
   </main>
 </Layout>
-
-<SectionContainer id="" class="mb-20">
-  <BentoExperience translations={i18n} />
-</SectionContainer>
