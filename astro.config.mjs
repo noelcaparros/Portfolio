@@ -13,5 +13,4 @@ export default defineConfig({
     },
   },
   site: "https://noelcaparros.github.io",
-  base: "",
 });
